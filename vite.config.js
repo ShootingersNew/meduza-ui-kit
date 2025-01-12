@@ -1,10 +1,11 @@
 import vue from "@vitejs/plugin-vue";
 import * as path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/components/index.ts"),
       name: "meduza-pet-ui-kit",
-      fileName: (format) => `meduza-pet-ui-kit.${format}.ts`,
+      fileName: (format) => `meduza-pet-ui-kit.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
@@ -27,15 +28,15 @@ export default defineConfig({
     vue(),
     dts({
       insertTypesEntry: true,
-      rollupTypes: true,
-      tsconfigPath : path.resolve(__dirname, "tsconfig.json"),
-      outDir: path.resolve(__dirname, "scr/components"),
+      tsconfigPath: path.resolve(__dirname, "tsconfig.json"),
+      cleanVueFileName: true,
+      entryRoot: path.resolve(__dirname, "src/components"),
+      outDir: path.resolve(__dirname, "dist/types"), // Убедитесь, что указана правильная директория для типов
     }),
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
-

@@ -1,33 +1,32 @@
-<script lang="ts" setup>
-import { defineProps, type PropType } from "vue";
+<template>
+  <button :class="['button', size, color]" :disabled="disabled">
+    <slot name="left-icon"></slot>
+    <slot></slot>
+    <slot name="right-icon"></slot>
+  </button>
+</template>
 
-const props = defineProps({
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  size: {
-    type: String as PropType<"small" | "medium" | "large">,
-    default: "medium",
-  },
-  color: {
-    type: String as PropType<"primary" | "secondary">,
-    default: "primary",
+<script lang="ts">
+import { defineComponent, type PropType } from "vue";
+
+export default defineComponent({
+  name: "ButtonComponent",
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String as PropType<"small" | "medium" | "large">,
+      default: "medium",
+    },
+    color: {
+      type: String as PropType<"primary" | "secondary" | "tertiary">,
+      default: "primary",
+    },
   },
 });
 </script>
-
-<template>
-  <button
-    class="button"
-    :class="[props.size, props.color]"
-    :disabled="props.disabled"
-  >
-    <slot name="left-icon" />
-    <slot />
-    <slot name="right-icon" />
-  </button>
-</template>
 
 <style scoped>
 .button {

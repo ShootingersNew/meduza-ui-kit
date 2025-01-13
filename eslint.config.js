@@ -1,7 +1,7 @@
-import pluginVue from "eslint-plugin-vue";
-import vueTsEslintConfig from "@vue/eslint-config-typescript";
 import pluginVitest from "@vitest/eslint-plugin";
 import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
+import vueTsEslintConfig from "@vue/eslint-config-typescript";
+import pluginVue from "eslint-plugin-vue";
 
 export default [
   {
@@ -26,7 +26,7 @@ export default [
     rules: {
       "no-unused-vars": "off",
       "no-undef": "warn",
-      "no-console": "error", // Добавляем правило, запрещающее использование console.log
     },
   },
 ];
+

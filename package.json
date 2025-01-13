@@ -37,7 +37,7 @@
     "@storybook/test": "^8.4.7",
     "@storybook/vue3": "^8.4.7",
     "@storybook/vue3-vite": "^8.4.7",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitest/eslint-plugin": "1.1.10",
     "@vue/eslint-config-prettier": "^10.1.0",

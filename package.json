@@ -18,7 +18,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "generate-stylus": "node scripts/generate-stylus.js",
+    "build": "vue-tsc -b && vite build && npm run generate-stylus",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
@@ -49,6 +50,8 @@
     "eslint-plugin-vue": "^9.32.0",
     "prettier": "^3.4.2",
     "storybook": "^8.4.7",
+    "stylus": "^0.64.0",
+    "stylus-loader": "^8.1.1",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
     "vite-plugin-dts": "^4.4.0",

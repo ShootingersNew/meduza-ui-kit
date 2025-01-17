@@ -1,4 +1,4 @@
-import Button from './ButtonComponent.vue';
+import { IconComponent } from './atoms/';
 
-export { Button };
+export { IconComponent };
 

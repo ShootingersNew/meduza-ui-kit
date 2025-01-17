@@ -1,0 +1,11 @@
+<div
+  :class="{
+    'icon-current-color': isCurrentColor,
+    'icon-inline': inline,
+    'icon-custom-size': Boolean(width),
+  }"
+  :style="stylesVariables"
+  @click="$emit('click')"
+  v-html="decodedIcon"
+></div>
+

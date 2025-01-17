@@ -1,0 +1,14 @@
+.icon
+
+  &-current-color
+    >>> path
+      fill currentColor
+
+  &-custom-size
+    :deep(svg)
+      display block
+      width var(--iconCustomWidth)
+      height var(--iconCustomHeight)
+
+  &-inline
+    display inline-flex

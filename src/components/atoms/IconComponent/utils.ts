@@ -1,6 +1,8 @@
+import { EIconNames } from "../../../types/IconComponent";
+
 const NO_ICON_TEXT = 'no icon found';
 
-const getIcon = async (name: string) => {
+const getIcon = async (name: EIconNames) => {
     try {
       const response = await fetch(
         new URL(`/public/icons/${name}.svg`, import.meta.url)

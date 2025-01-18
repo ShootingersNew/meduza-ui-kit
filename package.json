@@ -1,7 +1,7 @@
 {
   "name": "meduza-pet-ui-kit",
   "private": false,
-  "version": "0.1.3",
+  "version": "0.1.5",
   "type": "module",
   "main": "./dist/meduza-pet-ui-kit.umd.js",
   "module": "./dist/meduza-pet-ui-kit.es.js",
@@ -15,7 +15,8 @@
       "require": "./dist/meduza-pet-ui-kit.umd.js"
     },
     "./styles": "./dist/meduza-pet-ui-kit.css",
-    "./variables": "./dist/styles/variables.styl"
+    "./variables": "./dist/styles/variables.styl",
+    "./types": "./dist/types/common.d.ts"
   },
   "scripts": {
     "dev": "vite",

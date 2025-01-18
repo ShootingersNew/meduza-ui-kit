@@ -1,6 +1,7 @@
 <template src="./view.html" />
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref } from "vue";
+import { computed, defineComponent, onMounted, PropType, ref } from "vue";
+import { EIconNames } from "../../../types/IconComponent";
 import { EIconStylesVariable, IIconStylesVariables } from "./models";
 import { getIcon } from "./utils";
 
@@ -8,7 +9,7 @@ export default defineComponent({
   name: "icon-component",
   props: {
     name: {
-      type: String,
+      type: String as PropType<EIconNames>,
       required: true,
     },
     /**

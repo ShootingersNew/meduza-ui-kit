@@ -1,4 +1,3 @@
-import { IconComponent } from './atoms/';
+import { IconComponent } from "./atoms/";
 
 export { IconComponent };
-

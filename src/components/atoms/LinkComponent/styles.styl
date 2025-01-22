@@ -1,0 +1,28 @@
+@import "../../../styles/variables.styl";
+
+link(mainColor, activeColor)
+    color mainColor
+    &:hover
+        color darken(mainColor, 20%)
+    &:active
+        color activeColor
+
+.link
+    text-decoration none
+
+.link--secondary
+    link(palette-color-secondary, pallete-color-primary)
+
+.link--black
+    link(palette-color-primary, darken(palette-color-primary, 20%))
+
+.link--blue
+    link(palette-color-blue, darken(palette-color-blue, 20%))
+
+.link--firm
+    link(palette-color-firm, darken(palette-color-firm, 20%))
+
+.link--disabled
+    color lighten(palette-color-secondary, 30%)
+    cursor not-allowed
+    pointer-events none

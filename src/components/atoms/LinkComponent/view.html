@@ -1,0 +1,9 @@
+<a
+  :href="href"
+  rel="noopener noreferrer"
+  :target="target"
+  :class="classList"
+  @click="$emit('click', href)"
+>
+  <slot></slot>
+</a>

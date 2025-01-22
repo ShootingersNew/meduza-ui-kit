@@ -32,9 +32,9 @@ function generateStylusContent(
   let stylusContent = "";
   for (const [key, value] of Object.entries(variables)) {
     if (generateVariable) {
-      stylusContent += `${key} = ${value}${postfix}\n`;
+      stylusContent += `${prefix}${key} = ${value}${postfix}\n`;
     }
-    stylusContent += `.${prefix}${key}\n  ${property} ${key}\n`;
+    stylusContent += `.${prefix}${key}\n  ${property} ${prefix}${key}\n`;
   }
 
   return stylusContent;
@@ -52,17 +52,15 @@ const titleSizeContent = generateStylusContent(
   "title-",
   "px"
 );
+const paletteColorContent = generateStylusContent(
+  palette,
+  "color",
+  "palette-color-"
+);
 const paletteBackgroundContent = generateStylusContent(
   palette,
   "background-color",
   "palette-bg-"
-);
-const paletteColorContent = generateStylusContent(
-  palette,
-  "color",
-  "palette-color-",
-  "",
-  false
 );
 
 const stylusContent = `${textSizeContent}\n${titleSizeContent}\n${paletteBackgroundContent}\n${paletteColorContent}`;

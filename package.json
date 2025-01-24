@@ -1,7 +1,7 @@
 {
   "name": "meduza-pet-ui-kit",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.2.8",
   "type": "module",
   "main": "./dist/meduza-pet-ui-kit.umd.js",
   "module": "./dist/meduza-pet-ui-kit.es.js",
@@ -16,12 +16,13 @@
     },
     "./styles": "./dist/meduza-pet-ui-kit.css",
     "./variables": "./dist/styles/variables.styl",
-    "./types": "./dist/types/common.d.ts"
+    "./enums": "./dist/enums/index.ts"
   },
   "scripts": {
     "dev": "vite",
     "generate-stylus": "node scripts/generate-stylus.js",
-    "build": "vue-tsc -b && vite build && npm run generate-stylus",
+    "copy-models": "node scripts/copy-enums.js",
+    "build": "vue-tsc -b && vite build && npm run generate-stylus && npm run copy-models",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write .",

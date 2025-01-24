@@ -1,4 +1,4 @@
-import { EIconNames } from "../../../types/IconComponent";
+import { EIconNames } from "../../../types/enums/index";
 
 const NO_ICON_TEXT = 'no icon found';
 

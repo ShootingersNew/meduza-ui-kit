@@ -14,7 +14,7 @@ const DefaultTemplate = (args) => ({
   setup() {
     return { args };
   },
-  template: `<LinkComponent  v-bind="args" href="https://youtu.be/dQw4w9WgXcQ">Click it</LinkComponent>`,
+  template: `<LinkComponent  v-bind="args" href="https://youtu.be/dQw4w9WgXcQ">Click it to get rickrolled</LinkComponent>`,
 });
 
 export const Default = DefaultTemplate.bind({});

@@ -31,12 +31,14 @@ export default defineConfig({
       tsconfigPath: path.resolve(__dirname, "tsconfig.json"),
       cleanVueFileName: true,
       entryRoot: path.resolve(__dirname, "src/components"),
-      outDir: path.resolve(__dirname, "dist/types"), // Убедитесь, что указана правильная директория для типов
+      outDir: path.resolve(__dirname, "dist/types"),
     }),
   ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
+      "@fonts": path.resolve(__dirname, "src/assets/fonts"),
     },
   },
 });
+

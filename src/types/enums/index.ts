@@ -1,4 +1,4 @@
 import { EIconNames } from "./IconComponent";
-
-export { EIconNames };
+import { ELinkTarget, ELinkTheme } from "./LinkComponent";
+export { EIconNames, ELinkTarget, ELinkTheme };
 

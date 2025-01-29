@@ -6,13 +6,16 @@ link(mainColor, activeColor)
         color darken(mainColor, 20%)
     &:active
         color activeColor
+    &.link--active
+        color activeColor
 
 .link
     text-decoration none
     font-family Roboto
+    cursor pointer
 
 .link--secondary
-    link(palette-color-secondary, pallete-color-primary)
+    link(palette-color-secondary, palette-color-primary)
 
 .link--black
     link(palette-color-primary, darken(palette-color-primary, 20%))

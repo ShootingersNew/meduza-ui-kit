@@ -12,7 +12,7 @@ export default defineComponent({
     },
     href: {
       type: String,
-      default: "#",
+      default: "",
     },
     target: {
       type: String as PropType<ELinkTarget>,
@@ -21,14 +21,18 @@ export default defineComponent({
     disabled: {
       type: Boolean,
     },
+    isActive: {
+      type: Boolean,
+    },
   },
   setup(props) {
     const classList = computed(() => ({
       link: true,
-      "link--secondary": props.theme === ELinkTheme.Black,
+      "link--secondary": props.theme === ELinkTheme.Secondary,
       "link--black": props.theme === ELinkTheme.Black,
       "link--firm": props.theme === ELinkTheme.Firm,
       "link--blue": props.theme === ELinkTheme.Blue,
+      "link--active": props.isActive,
       "link--disabled": props.disabled,
     }));
 

@@ -1,9 +1,14 @@
 <a
+  v-if="Boolean(href)"
   :href="href"
   rel="noopener noreferrer"
   :target="target"
   :class="classList"
-  @click="$emit('click', href)"
+  @click="$emit('on-click', href)"
 >
   <slot></slot>
 </a>
+<span v-else :class="classList" @click="$emit('on-click', href)">
+  <slot></slot>
+</span>
+

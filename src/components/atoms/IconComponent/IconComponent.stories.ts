@@ -21,7 +21,7 @@ const DefaultTemplate = (args) => ({
 
 export const Logo = DefaultTemplate.bind({});
 Logo.args = {
-  name: 'logo',
+  name: 'arrow',
   width: 55,
   isCurrentColor: false,
   inline: false,

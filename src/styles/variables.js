@@ -20,6 +20,7 @@ const palette = {
   red: "#c4372d",
   firm: "#D78E39",
   white: "#FFFFFF",
+  border: "#F0F0F0",
 };
 
 function generateStylusContent(
@@ -66,3 +67,4 @@ const paletteBackgroundContent = generateStylusContent(
 const stylusContent = `${textSizeContent}\n${titleSizeContent}\n${paletteBackgroundContent}\n${paletteColorContent}`;
 
 export default stylusContent;
+

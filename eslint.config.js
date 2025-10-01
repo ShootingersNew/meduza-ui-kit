@@ -11,7 +11,14 @@ export default [
 
   {
     name: "app/files-to-ignore",
-    ignores: ["**/dist/**", "**/dist-ssr/**", "**/coverage/**"],
+    ignores: [
+      "**/dist/**",
+      "**/dist-ssr/**",
+      "**/coverage/**",
+      "**/storybook-static/**",
+      "**/*.vue.js",
+      "src/stories/**",
+    ],
   },
 
   ...pluginVue.configs["flat/essential"],

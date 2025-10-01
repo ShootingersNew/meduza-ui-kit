@@ -1,4 +1,4 @@
 import { IconComponent, LinkComponent } from "./atoms/";
-import { TopicAdditionalsTemplateComponent } from "./templates";
+import { TopicAdditionalsTemplate } from "./templates";
 
-export { IconComponent, LinkComponent, TopicAdditionalsTemplateComponent };
+export { IconComponent, LinkComponent, TopicAdditionalsTemplate };

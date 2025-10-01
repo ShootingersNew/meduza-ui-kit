@@ -1,14 +1,14 @@
 <div class="topic-additionals-template">
   <slot />
-  <div class="additionals">
-    <div class="additionals__main">
+  <div class="additionals" v-if="hasAdditionals">
+    <div class="additionals__main" v-if="slots.additionalsMain">
       <slot name="additionalsMain" />
     </div>
-    <div class="additionals__secondary">
+    <div class="additionals__secondary" v-if="slots.additionalsSecondary">
       <slot name="additionalsSecondary" />
     </div>
-    <div class="additionals__footer">
-      <slot name="additionlsFooter" />
+    <div class="additionals__footer" v-if="slots.additionalsFooter">
+      <slot name="additionalsFooter" />
     </div>
   </div>
 </div>

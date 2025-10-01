@@ -1,13 +1,29 @@
 <template src="./view.html" />
 <script lang="ts" setup>
-import { type VNode } from "vue";
+import { computed, type VNode } from "vue";
+
 defineOptions({
-  name: "topic-additionals-template-component",
+  name: "TopicAdditionalsTemplate",
 });
-defineSlots<{
-  default: () => VNode[];
-  additionalsMain: () => VNode[];
-  additionalsSecondary: () => VNode[];
-  additionlsFooter: () => VNode[];
+
+const slots = defineSlots<{
+  default?: () => VNode | VNode[];
+  additionalsMain?: () => VNode | VNode[];
+  additionalsSecondary?: () => VNode | VNode[];
+  additionalsFooter?: () => VNode | VNode[];
 }>();
+
+const hasAdditionals = computed(
+  () =>
+    Boolean(
+      slots.additionalsMain ||
+        slots.additionalsSecondary ||
+        slots.additionalsFooter
+    )
+);
+
+defineExpose({
+  hasAdditionals,
+  slots,
+});
 </script>

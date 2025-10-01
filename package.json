@@ -1,7 +1,7 @@
 {
   "name": "meduza-pet-ui-kit",
   "private": false,
-  "version": "0.2.11",
+  "version": "0.3.0",
   "type": "module",
   "main": "./dist/meduza-pet-ui-kit.umd.js",
   "module": "./dist/meduza-pet-ui-kit.es.js",
@@ -72,4 +72,3 @@
     ]
   }
 }
-

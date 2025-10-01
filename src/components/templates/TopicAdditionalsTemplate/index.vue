@@ -13,13 +13,12 @@ const slots = defineSlots<{
   additionalsFooter?: () => VNode | VNode[];
 }>();
 
-const hasAdditionals = computed(
-  () =>
-    Boolean(
-      slots.additionalsMain ||
-        slots.additionalsSecondary ||
-        slots.additionalsFooter
-    )
+const hasAdditionals = computed(() =>
+  Boolean(
+    slots.additionalsMain ||
+      slots.additionalsSecondary ||
+      slots.additionalsFooter
+  )
 );
 
 defineExpose({

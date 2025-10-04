@@ -1,7 +1,7 @@
 <template src="./view.html" />
 <script lang="ts">
 import { computed, defineComponent, onMounted, PropType, ref } from "vue";
-import { EIconNames } from "../../../types/enums/index";
+import { EIconNames } from "../../../types/enums";
 import { EIconStylesVariable, IIconStylesVariables } from "./models";
 import { getIcon } from "./utils";
 
@@ -62,4 +62,3 @@ export default defineComponent({
 });
 </script>
 <style lang="stylus" scoped src="./styles.styl" />
-

@@ -1,5 +1,5 @@
 import LinkComponent from './index.vue';
-import { ELinkTheme } from './models';
+import { ELinkTheme } from '../../../types/enums';
 export default {
   title: 'Atoms/LinkComponent',
   component: LinkComponent,
@@ -11,7 +11,7 @@ export default {
   },
 };
 
-const DefaultTemplate = (args) => ({
+const DefaultTemplate = (args: Record<string, unknown>) => ({
   components: { LinkComponent },
   setup() {
     return { args };

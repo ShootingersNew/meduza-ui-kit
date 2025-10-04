@@ -1,7 +1,7 @@
 <template src="./view.html" />
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
-import { ELinkTarget, ELinkTheme } from "./models";
+import { ELinkTarget, ELinkTheme } from "../../../types/enums";
 
 export default defineComponent({
   name: "link-component",
@@ -45,4 +45,3 @@ export default defineComponent({
 });
 </script>
 <style lang="stylus" scoped src="./styles.styl" />
-

@@ -13,7 +13,7 @@ import { computed } from "vue";
 
 defineOptions({ name: "TypographyText" });
 
-type TextSize = "default" | "medium" | "small" | "caption";
+type TextSize = "default" | "large" | "medium" | "small" | "caption";
 type TextTag = "p" | "span" | "div" | "small" | "time";
 
 const props = withDefaults(
@@ -29,6 +29,8 @@ const props = withDefaults(
 
 const sizeClass = computed(() => {
   switch (props.size) {
+    case "large":
+      return "text-large";
     case "medium":
       return "text-medium";
     case "small":

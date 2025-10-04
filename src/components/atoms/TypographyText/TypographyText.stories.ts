@@ -5,7 +5,7 @@ const meta: Meta<typeof TypographyText> = {
   title: 'Atoms/TypographyText',
   component: TypographyText,
   argTypes: {
-    size: { control: { type: 'select' }, options: ['default', 'medium', 'small', 'caption'] },
+  size: { control: { type: 'select' }, options: ['large','default', 'medium', 'small', 'caption'] },
     tag: { control: { type: 'select' }, options: ['p', 'span', 'div', 'small', 'time'] },
   },
 };

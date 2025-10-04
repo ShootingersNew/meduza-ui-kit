@@ -1,5 +1,6 @@
 const textSize = {
   default: 22,
+  large: 26,
   medium: 18,
   small: 16,
   smallest: 12,

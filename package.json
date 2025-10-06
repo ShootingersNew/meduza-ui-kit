@@ -1,12 +1,13 @@
 {
   "name": "meduza-pet-ui-kit",
   "private": false,
-  "version": "0.3.4",
+  "version": "0.3.5",
   "type": "module",
   "main": "./dist/meduza-pet-ui-kit.umd.js",
   "module": "./dist/meduza-pet-ui-kit.es.js",
   "files": [
-    "dist"
+    "dist",
+    "dist/styles/variables.styl"
   ],
   "types": "./dist/types/index.d.ts",
   "exports": {

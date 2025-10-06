@@ -22,6 +22,7 @@ export default defineConfig({
         },
       },
     },
+    cssCodeSplit: false, // Критично: объединить CSS в один файл
   },
   plugins: [
     vue(),
@@ -35,6 +36,12 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+    },
+  },
+  css: {
+    // КРИТИЧНО: Явно отключить CSS Modules для utility классов
+    modules: {
+      scopeBehaviour: 'global', // Убедиться, что импорт из index.styl будет глобальным
     },
   },
 });

@@ -85,6 +85,8 @@ const maxWidthStyles = computed(() => {
 .card {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive max-width support */

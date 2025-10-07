@@ -6,3 +6,6 @@ import { IconComponent, LinkComponent, TypographyHeading, TypographyText, CardCo
 import { TopicAdditionalsTemplate } from "./templates/";
 export { IconComponent, LinkComponent, TypographyHeading, TypographyText, CardContainer, TopicAdditionalsTemplate };
 
+// Export common types
+export type { MaxWidthBreakpoints } from "../types/common";
+

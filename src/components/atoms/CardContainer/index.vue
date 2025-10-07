@@ -41,12 +41,14 @@ const ariaLabel = props.ariaLabel;
 const maxWidthClasses = computed(() => {
   if (!props.maxWidth) return "";
 
+  const classes = ["card--centered"];
+
   // If it's an object, we'll use CSS custom properties
   if (typeof props.maxWidth === "object") {
-    return "card--responsive-width";
+    classes.push("card--responsive-width");
   }
 
-  return "";
+  return classes.join(" ");
 });
 
 const maxWidthStyles = computed(() => {
@@ -81,10 +83,14 @@ const maxWidthStyles = computed(() => {
 });
 </script>
 
-<style scoped>
+<style>
 .card {
   display: flex;
   flex-direction: column;
+}
+
+/* Auto-centering only when max-width is set */
+.card--centered {
   margin-left: auto;
   margin-right: auto;
 }

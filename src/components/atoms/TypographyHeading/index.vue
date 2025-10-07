@@ -44,7 +44,7 @@ const tag = computed(() => props.tag ?? `h${props.level}`);
 
 <style scoped>
 .typography-heading {
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
   line-height: 140%;
 }

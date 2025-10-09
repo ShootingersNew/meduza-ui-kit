@@ -1,4 +1,4 @@
-# UI-kit for my pet project
+# meduza-pet-ui-kit — UI Kit (общая библиотека)
 
 ### Матрица токенов и классов
 
